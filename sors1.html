@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سورس بازی + جایزه دار - Lirex Team</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Persian Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    
+    <!-- Special Font for Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Code Highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <!-- RGB Background Effects -->
+    <div class="rgb-bg">
+        <div class="rgb-circle circle-1"></div>
+        <div class="rgb-circle circle-2"></div>
+        <div class="rgb-circle circle-3"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <span class="logo-text-glow">LYREX</span>
+                <span class="logo-sub">TEAM</span>
+            </div>
+            
+            <!-- Back Button -->
+            <a href="page2.html" class="btn btn-outline">
+                <i class="fas fa-arrow-right"></i>
+                بازگشت به خدمات
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Source Header -->
+    <section class="source-header">
+        <div class="container">
+            <div class="source-badge">سورس رایگان</div>
+            <h1 class="source-title">سورس بازی + جایزه دار برای روبیکا</h1>
+            <p class="source-subtitle">یک ربات خفن برای سرگرمی و بازی با پنل سازنده و جایزه دار</p>
+            
+            <div class="source-meta">
+                <div class="meta-item">
+                    <i class="fas fa-code"></i>
+                    <span>زبان: Python</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-database"></i>
+                    <span>پایگاه داده: JSON</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>آخرین آپدیت: 1404/10/16</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-download"></i>
+                    <span>دانلود: 84 بار</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Source Content -->
+    <section class="source-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Description -->
+                    <div class="content-section glass-card">
+                        <h2><i class="fas fa-info-circle"></i> توضیحات سورس</h2>
+                        <p>این یک ربات خفن برای سرگرمی و بازی برای روبیکا با پنل سازنده و جایزه دار می‌باشد. سورس کاملاً تست شده و آماده اجرا است.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>سیستم بازی چند نفره</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>پنل مدیریت پیشرفته</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>سیستم جایزه‌دهی هوشمند</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>امنیت بالا در برابر اسپم</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>پشتیبانی از چندین زبان</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Installation Guide -->
+                    <div class="content-section glass-card">
+                        <h2><i class="fas fa-wrench"></i> آموزش فعال‌سازی</h2>
+                        
+                        <div class="code-instruction">
+                            <h3>مراحل نصب و راه‌اندازی:</h3>
+                            
+                            <div class="step">
+                                <div class="step-number">۱</div>
+                                <div class="step-content">
+                                    <h4>نصب پیش‌نیازها</h4>
+                                    <p>ابتدا پکیج‌های مورد نیاز را نصب کنید:</p>
+                                    <pre><code class="language-bash">
+pip install rubka</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">۲</div>
+                                <div class="step-content">
+                                    <h4>تنظیم توکن</h4>
+                                    <p>فایل <code>sors1.py</code> را باز کرده و در خط ۲۰ توکن خود را قرار دهید:</p>
+                                    <pre><code class="language-python"># خط ۲۰: توکن ربات خود را قرار دهید
+TOKEN = "توکن_ربات_شما_اینجا"
+
+# خط ۲۱ و ۲۲: چت آیدی خود را قرار دهید
+ADMIN_CHAT_ID = "چت_آیدی_شما"
+SUPPORT_CHAT_ID = "چت_آیدی_پشتیبانی"</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">۳</div>
+                                <div class="step-content">
+                                    <h4>نحوه پیدا کردن چت آیدی</h4>
+                                    <p>پس از جای‌گذاری توکن، ربات را اجرا کنید و به پیوی ربات پیام بدهید. چت آیدی شما در ترمینال نمایش داده می‌شود.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Requirements -->
+                    <div class="content-section glass-card">
+                        <h2><i class="fas fa-list-check"></i> لیست پیش‌ نیازها</h2>
+                        
+                        <div class="requirements">
+                            <div class="req-item">
+                                <i class="fab fa-python"></i>
+                                <div>
+                                    <h4>پایتون ۳.۸ یا بالاتر</h4>
+                                    <p>ورژن مورد نیاز برای اجرای سورس</p>
+                                </div>
+                            </div>
+                            
+                            <div class="req-item">
+                                <i class="fas fa-network-wired"></i>
+                                <div>
+                                    <h4>اتصال اینترنت</h4>
+                                    <p>برای ارتباط با API روبیکا</p>
+                                </div>
+                            </div>
+                            
+                            <div class="req-item">
+                                <i class="fas fa-server"></i>
+                                <div>
+                                    <h4>سرور یا کامپیوتر شخصی</h4>
+                                    <p>برای اجرای ۲۴ ساعته ربات</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Libraries -->
+                    <div class="content-section glass-card">
+                        <h2><i class="fas fa-book"></i> لیست کتابخانه‌های مورد نیاز</h2>
+                        
+                        <div class="libraries">
+                            <div class="library-item">
+                                <code>rubpy</code>
+                                <span>برای ارتباط با روبیکا</span>
+                            </div>
+                            <div class="library-item">
+                                <code>requests</code>
+                                <span>برای درخواست‌های HTTP</span>
+                            </div>
+                            <div class="library-item">
+                                <code>json</code>
+                                <span>برای مدیریت داده‌ها</span>
+                            </div>
+                            <div class="library-item">
+                                <code>time</code>
+                                <span>برای مدیریت زمان</span>
+                            </div>
+                            <div class="library-item">
+                                <code>random</code>
+                                <span>برای تولید مقادیر تصادفی</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Download Card -->
+                    <div class="download-card glass-card">
+                        <div class="download-header">
+                            <i class="fas fa-download"></i>
+                            <h3>دانلود سورس</h3>
+                        </div>
+                        
+                        <div class="download-info">
+                            <div class="info-item">
+                                <span>حجم فایل:</span>
+                                <strong>۲.۵ مگابایت</strong>
+                            </div>
+                            <div class="info-item">
+                                <span>فرمت:</span>
+                                <strong>Python (.py)</strong>
+                            </div>
+                            <div class="info-item">
+                                <span>پسورد:</span>
+                                <strong class="no-password">ندارد</strong>
+                            </div>
+                            <div class="info-item">
+                                <span>تست شده:</span>
+                                <strong class="tested">✓ بله</strong>
+                            </div>
+                        </div>
+                        
+                        <a href="files/sors1.py" class="btn btn-primary btn-download" download="sors1.py">
+                            <i class="fas fa-cloud-download-alt"></i>
+                            دانلود مستقیم سورس
+                        </a>
+                        
+                        <div class="download-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>فایل پس از دانلود آماده اجرا است. فقط کافیست توکن خود را قرار دهید.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Preview Code -->
+                    <div class="preview-card glass-card">
+                        <h3><i class="fas fa-eye"></i> پیش ‌نمایش کد</h3>
+                        
+                        <pre><code class="language-python">import rubpy
+import asyncio
+from rubka.asynco import Robot
+from rubka.context import Message
+from rubka.keypad import ChatKeypadBuilder
+from collections import defaultdict, deque
+from datetime import datetime, timedelta
+import json
+import os
+import random
+import string
+from pathlib import Path
+from typing import Dict, List
+
+DB_FILE = "user_data.json"
+LOG_FILE = "chat_logs.json"
+CODES_FILE = "coin_codes.json"
+SERIAL_CODES_FILE = "serial_codes.json"
+INTERNET_REQUESTS_FILE = "internet_requests.json"
+
+bot = Robot(token="")
+ADMIN_ID = ""
+CREATOR_ID = ""
+
+os.makedirs("profile_pics", exist_ok=True)
+
+async def set_commands():
+    print(await bot.set_commands(
+        [
+            {"command": "start", "description": "فعالسازی ربات"},
+            {"command": "admin", "description": "پنل ادمین (مخصوص ادمین‌ها)"},
+            {"command": "help", "description": "راهنمای استفاده از ربات"},
+            {"command": "balance", "description": "موجودی و تراکنش‌ها"},
+            {"command": "shop", "description": "فروشگاه سکه"},
+            {"command": "serial", "description": "استفاده از کد سریال"},
+            {"command": "internet", "description": "تبدیل موجودی به اینترنت"}
+        ]
+    ))
+
+BTN_ROCK_PAPER_SCISSORS = "🪨 سنگ کاغذ قیچی"
+BTN_DICE_GAME = "🎲 تاس"
+BTN_WHEEL = "🎡 گردونه شانس"
+BTN_BALANCE = "💰 موجودی"
+BTN_SHOP = "🛍️ فروشگاه🎖"
+BTN_SERIAL_CODE = "🔑 کد سریال"
+BTN_HELP = "❓ راهنما"
+BTN_INTERNET = "📱 تبدیل موجودی به اینترنت"
+
+BTN_ROCK = "🪨 سنگ"
+BTN_PAPER = "📄 کاغذ"
+BTN_SCISSORS = "✂️ قیچی"
+BTN_BACK = "🔙 بازگشت"
+
+BTN_EVEN = "⚪ زوج"
+BTN_ODD = "⚫ فرد"
+BTN_DICE_BACK = "🔙 بازگشت"
+
+BTN_BROADCAST = "📢 ارسال همگانی"
+BTN_USER_COUNT = "👥 تعداد کاربران"
+BTN_CREATE_SERIAL = "🔑 ساخت سریال"
+BTN_MASS_CREDIT = "💳 افزایش اعتبار همگانی"
+BTN_ADMIN_BACK = "🔙 بازگشت"
+
+BTN_BUY_10K = "10,000 تومان ➜ 7,000"
+BTN_BUY_20K = "20,000 تومان ➜ 15,000"
+BTN_SHOP_BACK = "🔙 بازگشت"
+
+BTN_1GB = "1 گیگ اینترنت - 10,000 تومان"
+BTN_1_5GB = "1.5 گیگ اینترنت - 15,000 تومان"
+BTN_INTERNET_BACK = "🔙 بازگشت"
+
+DB = {
+    "user_info": defaultdict(lambda: {
+        "balance": 0,
+        "today_profit": 0,
+        "today_loss": 0,
+        "last_activity": datetime.now().isoformat(),
+        "wheel_last_spin": None,
+        "transactions": []
+    }),
+    "serial_codes": {},
+    "admin_codes": {},
+    "internet_requests": {}
+}
+
+def save_db():
+    with open(DB_FILE, "w", encoding="utf-8") as f:
+        json.dump(DB["user_info"], f, ensure_ascii=False, indent=4)
+    
+    with open(SERIAL_CODES_FILE, "w", encoding="utf-8") as f:
+        json.dump(DB["serial_codes"], f, ensure_ascii=False, indent=4)
+    
+    with open(INTERNET_REQUESTS_FILE, "w", encoding="utf-8") as f:
+        json.dump(DB["internet_requests"], f, ensure_ascii=False, indent=4)
+
+def load_db():
+    if os.path.exists(DB_FILE):
+        with open(DB_FILE, "r", encoding="utf-8") as f:
+            try:
+                DB["user_info"].update(json.load(f))
+            except:
+                pass
+    
+    if os.path.exists(SERIAL_CODES_FILE):
+        with open(SERIAL_CODES_FILE, "r", encoding="utf-8") as f:
+            try:
+                DB["serial_codes"].update(json.load(f))
+            except:
+                pass
+    
+    if os.path.exists(INTERNET_REQUESTS_FILE):
+        with open(INTERNET_REQUESTS_FILE, "r", encoding="utf-8") as f:
+            try:
+                DB["internet_requests"].update(json.load(f))
+            except:
+                pass
+
+def add_transaction(uid: str, amount: int, type: str, description: str):
+    transaction = {
+        "amount": amount,
+        "type": type,
+        "description": description,
+        "timestamp": datetime.now().isoformat()
+    }
+    
+    DB["user_info"][uid]["transactions"].append(transaction)
+    
+    if amount > 0:
+        DB["user_info"][uid]["today_profit"] += amount
+    else:
+        DB["user_info"][uid]["today_loss"] += abs(amount)
+    
+    DB["user_info"][uid]["balance"] += amount
+    save_db()
+</code></pre>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div class="support-card glass-card">
+                        <h3><i class="fas fa-headset"></i> پشتیبانی</h3>
+                        <p>در صورت مشکل در نصب یا اجرا با ما در ارتباط باشید:</p>
+                        
+                        <div class="support-links">
+                            <a href="https://t.me/Lyrex7" class="support-link" target="_blank">
+                                <i class="fab fa-telegram"></i>
+                                تلگرام پشتیبانی
+                            </a>
+                            <a href="javascript:void(0)" class="support-link contact-trigger">
+                                <i class="fas fa-comments"></i>
+                                سایر راه‌های ارتباطی
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Sources -->
+    <section class="related-sources">
+        <div class="container">
+            <h2 class="section-title">سورس‌های مشابه</h2>
+            
+            <div class="sources-grid">
+                <a href="javascript:void(0)" class="source-item glass-card">
+                    <div class="source-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>ربات مدیریت سرور</h3>
+                    <p>سیستم مدیریت کامل سرورهای بازی</p>
+                    <span class="source-price">۹۹,۰۰۰ تومان</span>
+                </a>
+                
+                <a href="javascript:void(0)" class="source-item glass-card">
+                    <div class="source-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>سیستم آمار پیشرفته</h3>
+                    <p>تحلیل و آنالیز عملکرد بازیکنان</p>
+                    <span class="source-price">۱۴۹,۰۰۰ تومان</span>
+                </a>
+                
+                <a href="javascript:void(0)" class="source-item glass-card">
+                    <div class="source-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>سیستم امنیتی</h3>
+                    <p>امنیت پیشرفته برای سرورها</p>
+                    <span class="source-price">۷۹,۰۰۰ تومان</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- مینی صفحه ارتباط با تیم -->
+    <div class="team-contact-modal" id="teamContactModal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h2><i class="fas fa-headset"></i> ارتباط با تیم Lirex</h2>
+                <button class="modal-close" id="closeContactModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="contact-platforms">
+                    <!-- اینستاگرام -->
+                    <a href="https://www.instagram.com/developer_agn47?igsh=MXB3b2t6Y2hmdXhu" 
+                       class="platform-card" target="_blank">
+                        <div class="platform-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="platform-info">
+                            <h3>اینستاگرام</h3>
+                            <p>developer_agn47</p>
+                            <span class="platform-status">
+                                <i class="fas fa-circle online"></i> آنلاین
+                            </span>
+                        </div>
+                        <div class="platform-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- تلگرام -->
+                    <a href="https://t.me/Lyrex7" 
+                       class="platform-card" target="_blank">
+                        <div class="platform-icon telegram">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="platform-info">
+                            <h3>تلگرام</h3>
+                            <p>@Lyrex7</p>
+                            <span class="platform-status">
+                                <i class="fas fa-circle online"></i> آنلاین
+                            </span>
+                        </div>
+                        <div class="platform-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- روبیکا -->
+                    <a href="https://rubika.ir/joinc/EBEGFJFH0AXVDXONSIWMWHTRNPJHEEGR" 
+                       class="platform-card" target="_blank">
+                        <div class="platform-icon rubika">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="platform-info">
+                            <h3>روبیکا</h3>
+                            <p>کانال رسمی تیم</p>
+                            <span class="platform-status">
+                                <i class="fas fa-circle online"></i> آنلاین
+                            </span>
+                        </div>
+                        <div class="platform-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>ساعات پاسخگویی</h4>
+                            <p>۲۴ ساعته، ۷ روز هفته</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-history"></i>
+                        <div>
+                            <h4>زمان پاسخ‌دهی</h4>
+                            <p>حداکثر ۲ ساعت</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text-glow">LYREX</span>
+                <span class="logo-sub">TEAM</span>
+            </div>
+            
+            <div class="footer-links">
+                <a href="index.html">خانه</a>
+                <a href="page2.html">خدمات</a>
+                <a href="#about">درباره ما</a>
+                <a href="javascript:void(0)" class="contact-trigger">تماس</a>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/developer_agn47?igsh=MXB3b2t6Y2hmdXhu" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://t.me/Lyrex7" class="social-icon" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://rubika.ir/joinc/EBEGFJFH0AXVDXONSIWMWHTRNPJHEEGR" class="social-icon" target="_blank">
+                    <i class="fas fa-comments"></i>
+                </a>
+            </div>
+            
+            <div class="footer-copyright">
+                © ۲۰۲۴ Lirex Team. تمامی حقوق محفوظ است.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Code Highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <!-- Additional Styles for Source Page -->
+    <style>
+        .source-header {
+            padding: 12rem 5% 6rem;
+            text-align: center;
+            background: linear-gradient(rgba(10, 10, 15, 0.9), rgba(10, 10, 15, 0.9));
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .source-badge {
+            display: inline-block;
+            background: rgba(0, 255, 0, 0.1);
+            color: var(--rgb-green);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+        
+        .source-title {
+            font-size: 4.2rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .source-subtitle {
+            font-size: 1.8rem;
+            color: var(--light-text-2);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        
+        .source-meta {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            color: var(--light-text-2);
+        }
+        
+        .meta-item i {
+            color: var(--rgb-red);
+        }
+        
+        .source-content {
+            padding: 6rem 5%;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 4rem;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: var(--light-text);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .content-section p {
+            font-size: 1.6rem;
+            color: var(--light-text-2);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .features-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            color: var(--light-text-2);
+        }
+        
+        .feature i {
+            color: var(--rgb-green);
+        }
+        
+        .code-instruction {
+            margin-top: 2rem;
+        }
+        
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--rgb-red);
+            color: var(--light-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            font-size: 1.8rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        .step-content p {
+            font-size: 1.5rem;
+            color: var(--light-text-2);
+            margin-bottom: 1rem;
+        }
+        
+        pre {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            border: 1px solid var(--glass-border);
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 1.4rem;
+        }
+        
+        .requirements {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .req-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .req-item i {
+            font-size: 3rem;
+            color: var(--rgb-red);
+        }
+        
+        .req-item h4 {
+            font-size: 1.6rem;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .req-item p {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+            margin: 0;
+        }
+        
+        .libraries {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .library-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: rgba(0, 204, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 204, 255, 0.1);
+        }
+        
+        .library-item code {
+            background: rgba(0, 204, 255, 0.1);
+            color: var(--rgb-cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1.4rem;
+        }
+        
+        .library-item span {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+        }
+        
+        /* Sidebar */
+        .download-card {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .download-header {
+            margin-bottom: 2rem;
+        }
+        
+        .download-header i {
+            font-size: 4rem;
+            color: var(--rgb-red);
+            margin-bottom: 1rem;
+        }
+        
+        .download-header h3 {
+            font-size: 2rem;
+            color: var(--light-text);
+        }
+        
+        .download-info {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-item span {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+        }
+        
+        .info-item strong {
+            font-size: 1.6rem;
+            color: var(--light-text);
+        }
+        
+        .no-password {
+            color: var(--rgb-green) !important;
+        }
+        
+        .tested {
+            color: var(--rgb-green) !important;
+        }
+        
+        .btn-download {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .download-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(0, 204, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 204, 255, 0.1);
+        }
+        
+        .download-note i {
+            color: var(--rgb-cyan);
+            font-size: 1.6rem;
+            margin-top: 0.3rem;
+        }
+        
+        .download-note p {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .preview-card,
+        .support-card {
+            margin-bottom: 3rem;
+        }
+        
+        .preview-card h3,
+        .support-card h3 {
+            font-size: 1.8rem;
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .support-card p {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .support-links {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .support-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 0, 102, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 0, 102, 0.1);
+            color: var(--light-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .support-link:hover {
+            background: rgba(255, 0, 102, 0.1);
+            transform: translateX(-5px);
+        }
+        
+        .support-link i {
+            color: var(--rgb-red);
+            font-size: 1.6rem;
+        }
+        
+        /* Related Sources */
+        .related-sources {
+            padding: 6rem 5%;
+            background: rgba(10, 10, 15, 0.5);
+            border-top: 1px solid var(--glass-border);
+        }
+        
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .source-item {
+            text-align: center;
+            padding: 3rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .source-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--rgb-red);
+        }
+        
+        .source-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 0, 102, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: var(--rgb-red);
+            border: 2px solid rgba(255, 0, 102, 0.3);
+        }
+        
+        .source-item h3 {
+            font-size: 2rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        .source-item p {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .source-price {
+            display: inline-block;
+            background: rgba(255, 165, 0, 0.1);
+            color: var(--rgb-yellow);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+        
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .source-title {
+                font-size: 3.2rem;
+            }
+            
+            .source-meta {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .sources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .source-title {
+                font-size: 2.8rem;
+            }
+            
+            .step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .step-number {
+                align-self: flex-start;
+            }
+        }
+        
+        /* استایل‌های مینی صفحه ارتباط با تیم */
+        .team-contact-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .team-contact-modal .modal-content {
+            background: var(--dark-bg-3);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 90%;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .modal-header h2 {
+            font-size: 2.4rem;
+            color: var(--light-text);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .modal-close {
+            background: rgba(255, 0, 102, 0.1);
+            color: var(--light-text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border: 1px solid rgba(255, 0, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background: var(--rgb-red);
+            transform: rotate(90deg);
+        }
+        
+        .contact-platforms {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .platform-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .platform-card:hover {
+            transform: translateX(-10px);
+            border-color: var(--rgb-red);
+            box-shadow: 0 10px 20px rgba(255, 0, 102, 0.2);
+        }
+        
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: right 0.6s ease;
+        }
+        
+        .platform-card:hover::before {
+            right: 100%;
+        }
+        
+        .platform-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .platform-icon.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        
+        .platform-icon.telegram {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .platform-icon.rubika {
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            color: white;
+        }
+        
+        .platform-info {
+            flex: 1;
+        }
+        
+        .platform-info h3 {
+            font-size: 1.8rem;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-info p {
+            font-size: 1.4rem;
+            color: var(--light-text-2);
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: var(--light-text-2);
+        }
+        
+        .platform-status .online {
+            color: var(--rgb-green);
+            font-size: 0.8rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .platform-arrow {
+            color: var(--light-text-2);
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+        }
+        
+        .platform-card:hover .platform-arrow {
+            color: var(--rgb-red);
+            transform: translateX(-5px);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .info-item i {
+            font-size: 2.5rem;
+            color: var(--rgb-cyan);
+            background: rgba(0, 204, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .info-item h4 {
+            font-size: 1.4rem;
+            color: var(--light-text);
+            margin-bottom: 0.3rem;
+        }
+        
+        .info-item p {
+            font-size: 1.2rem;
+            color: var(--light-text-2);
+            margin: 0;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .team-contact-modal .modal-content {
+                padding: 2rem;
+            }
+            
+            .modal-header h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .platform-card {
+                padding: 1.2rem;
+            }
+            
+            .platform-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team-contact-modal .modal-content {
+                padding: 1.5rem;
+            }
+            
+            .platform-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .platform-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .platform-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .platform-card:hover .platform-arrow {
+                transform: rotate(90deg) translateY(-5px);
+            }
+        }
+        
+        /* کلاس برای کلیک روی تماس */
+        .contact-trigger {
+            cursor: pointer;
+        }
+    </style>
+    
+    <!-- اسکریپت مدیریت مینی صفحه -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // مدیریت مینی صفحه ارتباط با تیم
+            const modal = document.getElementById('teamContactModal');
+            const closeModalBtn = document.getElementById('closeContactModal');
+            const contactTriggers = document.querySelectorAll('.contact-trigger');
+            
+            // باز کردن مینی صفحه
+            contactTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (modal) {
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // بستن مینی صفحه
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // بستن با کلیک خارج از مینی صفحه
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+            
+            // بستن با کلید Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
