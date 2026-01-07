@@ -1,0 +1,463 @@
+/* Additional styles for detail pages */
+
+/* Code block styling */
+.hljs {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--rgb-red);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rgb-purple);
+}
+
+/* Loading animation */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--glass-border);
+    border-top: 3px solid var(--rgb-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--rgb-green);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    color: var(--light-text);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+    max-width: 400px;
+}
+
+.notification.error {
+    border-color: var(--rgb-red);
+}
+
+.notification.success {
+    border-color: var(--rgb-green);
+}
+
+.notification.warning {
+    border-color: var(--rgb-yellow);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-bg-3);
+    color: var(--light-text);
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    border: 1px solid var(--glass-border);
+    z-index: 100;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--glass-border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, var(--rgb-red), var(--rgb-purple));
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: var(--light-text-2);
+    margin: 0.2rem;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.badge-primary {
+    background: rgba(255, 0, 102, 0.1);
+    color: var(--rgb-red);
+    border: 1px solid rgba(255, 0, 102, 0.3);
+}
+
+.badge-secondary {
+    background: rgba(0, 204, 255, 0.1);
+    color: var(--rgb-cyan);
+    border: 1px solid rgba(0, 204, 255, 0.3);
+}
+
+.badge-success {
+    background: rgba(0, 255, 0, 0.1);
+    color: var(--rgb-green);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-text);
+    margin-bottom: 0.8rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--light-text);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--rgb-red);
+    box-shadow: 0 0 0 2px rgba(255, 0, 102, 0.1);
+    outline: none;
+}
+
+/* Alerts */
+.alert {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    border: 1px solid;
+}
+
+.alert-info {
+    background: rgba(0, 204, 255, 0.1);
+    border-color: rgba(0, 204, 255, 0.3);
+    color: var(--rgb-cyan);
+}
+
+.alert-warning {
+    background: rgba(255, 165, 0, 0.1);
+    border-color: rgba(255, 165, 0, 0.3);
+    color: var(--rgb-yellow);
+}
+
+.alert-danger {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: rgba(255, 0, 0, 0.3);
+    color: var(--rgb-red);
+}
+
+.alert-success {
+    background: rgba(0, 255, 0, 0.1);
+    border-color: rgba(0, 255, 0, 0.3);
+    color: var(--rgb-green);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--dark-bg-3);
+    border-radius: 15px;
+    padding: 3rem;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid var(--glass-border);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    color: var(--light-text-2);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--rgb-red);
+}
+
+.modal-header {
+    margin-bottom: 2rem;
+}
+
+.modal-body {
+    margin-bottom: 2rem;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.table th,
+.table td {
+    padding: 1.2rem 1.5rem;
+    text-align: right;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.table th {
+    background: var(--glass-bg);
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.table td {
+    color: var(--light-text-2);
+    font-size: 1.4rem;
+}
+
+.table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 3rem 0;
+}
+
+.page-item {
+    list-style: none;
+}
+
+.page-link {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    color: var(--light-text-2);
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover,
+.page-link.active {
+    background: var(--rgb-red);
+    border-color: var(--rgb-red);
+    color: var(--light-text);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 2rem 0;
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.breadcrumb-item a {
+    color: var(--light-text-2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--rgb-red);
+}
+
+.breadcrumb-separator {
+    color: var(--rgb-red);
+}
+
+/* Cards with hover effects */
+.hover-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.hover-card:hover::before {
+    left: 100%;
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(45deg, var(--rgb-red), var(--rgb-purple), var(--rgb-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Shine effect */
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+}
