@@ -5,25 +5,87 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '100%';
-            navMenu.style.right = '0';
-            navMenu.style.background = 'rgba(10, 10, 15, 0.95)';
-            navMenu.style.backdropFilter = 'blur(10px)';
-            navMenu.style.border = '1px solid rgba(255, 255, 255, 0.1)';
-            navMenu.style.borderRadius = '10px';
-            navMenu.style.padding = '2rem';
-            navMenu.style.width = '200px';
-            navMenu.style.gap = '1rem';
+            navMenu.classList.toggle('active');
         });
     }
     
-    // مدیریت مینی صفحه ارتباط با تیم (برای همه صفحات)
-    const initContactModal = () => {
+    // مدیریت پاپ‌آپ تبلیغاتی (فقط در صفحه اصلی)
+    function initPopup() {
+        const isIndexPage = window.location.pathname.includes('index.html') || 
+                           window.location.pathname === '/' || 
+                           window.location.pathname.endsWith('/');
+        
+        if (!isIndexPage) return;
+        
+        const popupModal = document.getElementById('popupModal');
+        const popupClose = document.getElementById('popupClose');
+        const timerElement = document.getElementById('timer');
+        
+        if (!popupModal) return;
+        
+        // چک کردن کوکی برای نمایش یکباره
+        if (localStorage.getItem('popupShown')) {
+            return;
+        }
+        
+        // نمایش پاپ‌آپ بعد از 1 ثانیه
+        setTimeout(() => {
+            popupModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // ذخیره کوکی
+            localStorage.setItem('popupShown', 'true');
+            
+            // تایمر خودکار
+            let timeLeft = 8;
+            const timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timerElement) {
+                    timerElement.textContent = timeLeft;
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    popupModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }, 1000);
+            
+            // نمایش دکمه بستن بعد از 3 ثانیه
+            setTimeout(() => {
+                if (popupClose) {
+                    popupClose.style.opacity = '1';
+                }
+            }, 3000);
+            
+            // بستن با کلیک روی دکمه
+            if (popupClose) {
+                popupClose.addEventListener('click', () => {
+                    clearInterval(timerInterval);
+                    popupModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // بستن با کلیک روی پس‌زمینه
+            popupModal.addEventListener('click', (e) => {
+                if (e.target === popupModal) {
+                    clearInterval(timerInterval);
+                    popupModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+        }, 1000);
+    }
+    
+    // اجرای پاپ‌آپ
+    initPopup();
+    
+    // مدیریت مینی صفحه ارتباط با تیم
+    function initContactModal() {
         const modal = document.getElementById('teamContactModal');
         const closeModalBtn = document.getElementById('closeContactModal');
         const contactTriggers = document.querySelectorAll('.contact-trigger');
@@ -62,41 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = 'auto';
             }
         });
-        
-        // افکت کلیک روی کارت‌ها
-        const platformCards = document.querySelectorAll('.platform-card');
-        platformCards.forEach(card => {
-            card.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.3);
-                    transform: scale(0);
-                    animation: ripple 0.6s linear;
-                    pointer-events: none;
-                    width: ${size}px;
-                    height: ${size}px;
-                    top: ${y}px;
-                    left: ${x}px;
-                    z-index: 1;
-                `;
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-    };
+    }
     
-    // فراخوانی تابع مدیریت مینی صفحه
+    // اجرای مینی صفحه ارتباطی
     initContactModal();
     
     // Animate stats counters
@@ -169,6 +199,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.classList.remove('active');
                 });
                 this.classList.add('active');
+                
+                // بستن منو در موبایل
+                if (navMenu) {
+                    navMenu.classList.remove('active');
+                }
             }
         });
     });
@@ -229,6 +264,44 @@ document.addEventListener('DOMContentLoaded', function() {
             to {
                 transform: scale(4);
                 opacity: 0;
+            }
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes neonWarning {
+            0% {
+                border-color: var(--neon-red);
+                box-shadow: 0 0 10px var(--neon-red),
+                            inset 0 0 10px rgba(255, 0, 0, 0.1);
+            }
+            50% {
+                border-color: var(--neon-blue);
+                box-shadow: 0 0 15px var(--neon-blue),
+                            inset 0 0 15px rgba(0, 128, 255, 0.1);
+            }
+            100% {
+                border-color: var(--neon-purple);
+                box-shadow: 0 0 20px var(--neon-purple),
+                            inset 0 0 20px rgba(255, 0, 255, 0.1);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
             }
         }
     `;
@@ -301,17 +374,41 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ctrl + S to search
         if (e.ctrlKey && e.key === 's') {
             e.preventDefault();
-            document.querySelector('a[href="#services"]').click();
+            const servicesLink = document.querySelector('a[href="#services"]');
+            if (servicesLink) {
+                servicesLink.click();
+            }
         }
         
-        // Escape to close mobile menu
+        // Escape to close mobile menu and modals
         if (e.key === 'Escape') {
-            navMenu.style.display = 'none';
-            const modal = document.getElementById('teamContactModal');
-            if (modal && modal.style.display === 'flex') {
-                modal.style.display = 'none';
+            // بستن منوی موبایل
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
+            
+            // بستن مینی صفحه ارتباط با تیم
+            const contactModal = document.getElementById('teamContactModal');
+            if (contactModal && contactModal.style.display === 'flex') {
+                contactModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
+            
+            // بستن پاپ‌آپ تبلیغاتی
+            const popupModal = document.getElementById('popupModal');
+            if (popupModal && popupModal.style.display === 'flex') {
+                popupModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navMenu && navMenu.classList.contains('active') && 
+            !navMenu.contains(e.target) && 
+            !mobileMenuBtn.contains(e.target)) {
+            navMenu.classList.remove('active');
         }
     });
     
