@@ -57,7 +57,7 @@
     <section class="all-services">
         <div class="container">
             <div class="services-grid">
-                <!-- Service 1 -->
+                <!-- Service 1 - سورس بازی + جایزه دار -->
                 <div class="service-card-full glass-card">
                     <div class="service-header">
                         <div class="service-icon-large">
@@ -110,11 +110,115 @@
                     </div>
                 </div>
                 
-                <!-- Service 2 -->
+                <!-- Service 2 - جوین اجباری (شماره) -->
+                <div class="service-card-full glass-card">
+                    <div class="service-header">
+                        <div class="service-icon-large">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <div class="service-title-group">
+                            <h3>جوین اجباری (شماره)</h3>
+                            <div class="service-badges">
+                                <span class="badge free">رایگان</span>
+                                <span class="badge new">جدید</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-description">
+                        <p>کد جوین اجباری فعال روی شماره برای کسانی که نیاز به جوین اجباری برای ربات شون دارن</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-item">
+                                <i class="fas fa-code"></i>
+                                <span>زبان: Python</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>پلتفرم: Rubika</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-shield"></i>
+                                <span>امنیت: بالا</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>آپدیت: رایگان دائمی</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <h4>تکنولوژی‌های استفاده شده:</h4>
+                            <div class="tech-icons">
+                                <img src="images/python.jpg" alt="Python">
+                                <img src="images/rubika.jpg" alt="Rubika">
+                            </div>
+                        </div>
+                        
+                        <a href="sors2.html" class="btn btn-primary btn-block">
+                            <i class="fas fa-external-link-alt"></i>
+                            مشاهده جزئیات و دانلود
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 - ربات ساده (شماره) -->
                 <div class="service-card-full glass-card">
                     <div class="service-header">
                         <div class="service-icon-large">
                             <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="service-title-group">
+                            <h3>ربات ساده (شماره)</h3>
+                            <div class="service-badges">
+                                <span class="badge free">رایگان</span>
+                                <span class="badge new">جدید</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-description">
+                        <p>ربات ساده برای روبیکا برای یادگیری بهتر و تقویت زبان پایتون شما</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-item">
+                                <i class="fas fa-code"></i>
+                                <span>زبان: Python</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>مناسب: یادگیری</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>سرعت: بالا</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>آپدیت: رایگان دائمی</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <h4>تکنولوژی‌های استفاده شده:</h4>
+                            <div class="tech-icons">
+                                <img src="images/python.jpg" alt="Python">
+                                <img src="images/rubika.jpg" alt="Rubika">
+                            </div>
+                        </div>
+                        
+                        <a href="sors3.html" class="btn btn-primary btn-block">
+                            <i class="fas fa-external-link-alt"></i>
+                            مشاهده جزئیات و دانلود
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 - ربات مدیریت سرور -->
+                <div class="service-card-full glass-card">
+                    <div class="service-header">
+                        <div class="service-icon-large">
+                            <i class="fas fa-server"></i>
                         </div>
                         <div class="service-title-group">
                             <h3>ربات مدیریت سرور</h3>
@@ -154,7 +258,7 @@
                     </div>
                 </div>
                 
-                <!-- Service 3 -->
+                <!-- Service 5 - سیستم آمار پیشرفته -->
                 <div class="service-card-full glass-card">
                     <div class="service-header">
                         <div class="service-icon-large">
@@ -631,6 +735,34 @@
             
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .service-card-full {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-header {
+                padding: 10rem 5% 4rem;
+            }
+            
+            .page-title {
+                font-size: 2.8rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .service-icon-large {
+                width: 60px;
+                height: 60px;
+                font-size: 2.5rem;
+            }
+            
+            .service-title-group h3 {
+                font-size: 2rem;
             }
         }
         
